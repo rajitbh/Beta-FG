@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([['Religion','Percentage'],
+ ['Gujarati',     8.3],
+          ['Bengali', 2.3],
+          ['Tamil',  3.3],
+          ['Marwari', 3.0],
+          ['Malayalam', 0.0],
+          ['Hindi', 43.6],
+          ['Telegu', 21.0],
+          ['Punjabi', 17.7],
+          ['Marathi', 0.8]);
+
+        var options = {
+          title: 'Prashant Vihar',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 500px; height: 300px;"></div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([['Religion','Percentage'],
+ ['Gujarati',     4.6],
+          ['Bengali',  12.0],
+          ['Tamil',  4.2],
+          ['Marwari', 1.4],
+          ['Malayalam', 0.0],
+          ['Hindi', 30.7],
+          ['Telegu', 36.1],
+          ['Punjabi', 9.7],
+          ['Marathi', 1.2]]);
+
+        var options = {
+          title: 'Kirti Nagar',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 500px; height: 300px;"></div>
+  </body>
+</html>

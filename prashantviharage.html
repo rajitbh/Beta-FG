@@ -1,0 +1,32 @@
+ <html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Age', 'Percentage'],
+          ['18-25',     511],
+          ['25-40',     1775],
+          ['40-55',  1557],
+          ['55-70', 1132],
+          ['70-85',    412],
+		  ['85-100',    21]
+        ]);
+
+        var options = {
+          title: 'Age Prashant Vihar',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 500px; height: 300px;"></div>
+  </body>
+</html>
+      }

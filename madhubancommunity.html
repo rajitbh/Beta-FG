@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([['Religion','Percentage'],
+ ['Gujarati',     9.9],
+          ['Bengali', 3.3],
+          ['Tamil',  3.4],
+          ['Marwari', 2.4],
+          ['Malayalam', 0.0],
+          ['Hindi', 44.1],
+          ['Telegu', 25],
+          ['Punjabi', 11],
+          ['Marathi', 0.9]]);
+
+        var options = {
+          title: 'Madhuban',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="donutchart" style="width: 500px; height: 300px;"></div>
+  </body>
+</html>
